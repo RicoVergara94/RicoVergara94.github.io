@@ -15,7 +15,7 @@
   --clr-light: #fff;
   --clr-dark: #303030;
   /* --clr-accent: #16e0bd; */
-  --clr-accent: #892382;
+  --clr-accent: #white;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -52,6 +52,7 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--ff-body);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 section {
@@ -116,6 +117,7 @@ h3 {
 
 .section__title--intro {
   font-weight: var(--fw-reg);
+  color: black;
 }
 .section__title--intro strong {
   display: block;
@@ -226,7 +228,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-accent);
+  background: black;
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -252,6 +254,8 @@ header {
 /* Feature Image section */
 
 #intro-container {
+  /* outline: 1px solid rgb(13, 255, 0); */
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(
@@ -262,12 +266,14 @@ header {
   );
 }
 .glass {
+  /* outline: 1px solid rgb(0, 132, 255); */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 10;
 }
 .glass li {
   position: absolute;
@@ -357,10 +363,13 @@ header {
     border-radius: 50%;
   }
 }
+
 /* intro section */
 
 .intro {
   position: relative;
+  top: 290px;
+  bottom: 0;
 }
 
 .intro__img {
@@ -406,12 +415,14 @@ header {
 /* My services section */
 
 .my-services {
+  position: relative;
   background-color: var(--clr-dark);
   background-image: url(./images/macbook_coding.jpg);
   background-size: cover;
   background-blend-mode: multiply;
   color: var(--clr-light);
   text-align: center;
+  z-index: 11;
 }
 
 .section__title--services {
